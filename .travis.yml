@@ -3,16 +3,9 @@ install: skip
 
 os: linux
 dist: trusty
-jdk: openjdk10
+jdk: openjdk11
 
 script:
-  - jdk_switcher use openjdk10
-  - # do stuff with OpenJDK 10
-  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
-  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
-  - export JAVA_HOME=$HOME/openjdk11
-  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 11 --target $JAVA_HOME
-  - # do stuff with open OpenJDK 11
   - git clone https://github.com/fedenybble/automationWeb.git
   - cd automationWeb
   - ./gradlew build --scan -s
