@@ -10,7 +10,7 @@ services:
   
 script:
   - git clone https://github.com/SpitaleA/Selenium-CleanStructure.git
-  - cd automationWeb
+  - cd Selenium-CleanStructure
   - touch dockerfile
   - echo FROM selenium/standalone-chrome:4.5.3-20221024 >> dockerfile
   - echo USER root >> dockerfile
