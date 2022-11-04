@@ -19,6 +19,6 @@ script:
   - echo RUN sudo unzip gradle.zip >> dockerfile
   - echo 'RUN sudo sed -i "s/src\/test\/resources\/driver\/chromedriver.exe/bin\/chromedriver/" src/test/java/factoryBrowser/Headless.java' >> dockerfile
   - echo "RUN sudo sed -i 's/properties.getProperty("browser")/"headless"/' src/test/java/utils/GetProperties.java" >> dockerfile
-  - echo CMD sudo gradle-7.5.1/bin/gradle test --tests "LoginTest" >> dockerfile
+  - echo CMD sudo gradle-7.5.1/bin/gradle test >> dockerfile
   - docker build . -t app
   - docker run app
